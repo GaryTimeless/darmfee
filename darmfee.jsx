@@ -7,7 +7,7 @@ const CONTENT = {
   name: "Darmfee",
   tagline: "Dein Bauchgefühl hat recht",
   subtagline: "Ganzheitliche Ernährungsberatung mit Herz und Wissenschaft",
-  heroButton: "Termin anfragen",
+  heroButton: "Gleich Termin anfragen",
   
   about: {
     heading: "Hallo, ich bin Christine!",
