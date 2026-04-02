@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 // INHALT – hier kann Christine alles selbst anpassen ✨
 // ============================================================
 const CONTENT = {
-  name: "Darmfee",
+  name: "Darmfee 2nd",
   tagline: "Dein Bauchgefühl hat recht",
   subtagline: "Ganzheitliche Ernährungsberatung mit Herz und Wissenschaft",
   heroButton: "Gleich Termin anfragen",
