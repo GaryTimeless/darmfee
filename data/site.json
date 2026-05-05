@@ -32,7 +32,6 @@
     "heading": "Kennst du das?",
     "intro": "Im hektischen Alltag bleibt der eigene Körper oft auf der Strecke. **Zeit, wieder bewusster auf dich zu achten.**",
     "cards": [
-      "Dein Bauch fühlt sich manchmal unruhig an",
       "Du möchtest deine Ernährung besser verstehen",
       "Du wünschst dir mehr Leichtigkeit und Wohlbefinden",
       "Du willst deinem Körper etwas Gutes tun"
@@ -44,23 +43,23 @@
     "items": [
       {
         "title": "Einfluss auf Stimmung und mentale Gesundheit",
-        "body": "Die Darm-Hirn-Achse verbindet den Darm mit dem zentralen Nervensystem. Durch ein gut aufgestelltes Darmmikrobiom wird die Produktion von Neurotransmittern positiv beeinflusst, die das emotionale Wohlbefinden steuern. Das bedeutet, dass eine gute Darmgesundheit auch mit einem niedrigeren Risiko für Angstzustände und Depressionen im Zusammenhang stehen."
+        "body": "Die Darm-Hirn-Achse verbindet den Darm mit dem zentralen Nervensystem. Durch ein gut aufgestelltes Darmmikrobiom wird die Produktion von Neurotransmittern positiv beeinflusst, die das emotionale Wohlbefinden steuern."
       },
       {
         "title": "Eine gute Verdauung",
-        "body": "Ein gesundes Darmmikrobiom verbessert die Verdauung und hilft bei der Nahrungsverwertung. Es trägt zur Zersetzung von Nahrungsmitteln und zur Absorption von Nährstoffen bei, was langfristig zu einer besseren allgemeinen Gesundheit führt. Entsteht ein Ungleichgewicht (Dysbiose) im Darm, kann dies zu massiven Verdauungsstörungen und zahlreichen weiteren Symptomen und Folgeerkrankungen führen."
+        "body": "Ein gesundes Darmmikrobiom verbessert die Verdauung und hilft bei der Nahrungsverwertung. Es trägt zur Zersetzung von Nahrungsmitteln und zur Absorption von Nährstoffen bei, was langfristig zu einer besseren allgemeinen Gesundheit führt."
       },
       {
         "title": "Stärkung des Immunsystems",
         "body": "Rund 70 Prozent unseres Immunsystems befindet sich im Darm. Ein gesundes Mikrobiom trägt dazu bei, Krankheitserreger abzuwehren und das Immunsystem zu stärken. Faktoren wie eine darmgesunde Ernährung, ausreichend und guter Schlaf, Bewegung und mentale Ausgeglichenheit fördern das Wachstum nützlicher Bakterien, die das Immunsystem unterstützen."
       },
       {
-        "title": "Regulierung des Hungergefühls",
-        "body": "Das Darmmikrobiom beeinflusst das Hungergefühl und den Stoffwechsel. Einige Bakterien sind in der Lage, das Hungergefühl zu steuern. Sie können helfen, Heißhungerattacken zu reduzieren und ein gesundes Körpergewicht zu halten. Die Pflege der Darmgesundheit kann daher auch bei Gewichtsmanagement und der Prävention von Übergewicht unterstützend wirken."
+        "title": "Besser Schlaf",
+        "body": "[Text folgt]"
       },
       {
-        "title": "Schutz vor chronischen Erkrankungen",
-        "body": "Ein ungünstiges Mikrobiom (Dysbiose im Darm) kann mit verschiedenen chronischen Erkrankungen wie Typ-2-Diabetes, Herz-Kreislauf-Erkrankungen und entzündlichen Darmerkrankungen in Verbindung gebracht werden. Durch die Förderung der Darmgesundheit kann das Risiko für diese Krankheiten gesenkt werden."
+        "title": "Mehr Energie",
+        "body": "[Text folgt]"
       }
     ]
   },
