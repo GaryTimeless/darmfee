@@ -32,9 +32,9 @@
     "heading": "Kennst du das?",
     "intro": "Im hektischen Alltag bleibt der eigene Körper oft auf der Strecke. **Zeit, wieder bewusster auf dich zu achten.**",
     "cards": [
-      "Du möchtest deine Ernährung besser verstehen",
-      "Du wünschst dir mehr Leichtigkeit und Wohlbefinden",
-      "Du willst deinem Körper etwas Gutes tun"
+      {"text": "Du möchtest deine Ernährung besser verstehen"},
+      {"text": "Du wünschst dir mehr Leichtigkeit und Wohlbefinden"},
+      {"text": "Du willst deinem Körper etwas Gutes tun"}
     ]
   },
 
@@ -91,11 +91,11 @@
     "label": "Über mich",
     "heading": "Ich bin Christine",
     "paragraphs": [
-      "Kennst du das, wenn dein Bauch einfach nicht mitspielt und du merkst, wie dich das im Alltag immer wieder ausbremst? Genau so ging es mir lange Zeit.",
-      "Früher habe ich im Vertrieb und im Einzelhandel gearbeitet — viel Stress, wenig Zeit, oft schnell irgendwas essen und weiter. Später habe ich mich im zweiten Bildungsweg für den Sport- und Gesundheitsbereich entschieden und mich selbstständig gemacht. Seit über zehn Jahren arbeite ich mit Menschen in Kursen, in Firmen, in Wellnesshotels und im Präventionsbereich.",
-      "Ich hatte über Jahre immer wieder Beschwerden, die mich im Alltag und im Sport eingeschränkt haben. Der Wendepunkt kam, als ich anfing, mich intensiver mit meinem Körper und meiner Ernährung auseinanderzusetzen. Schritt für Schritt habe ich gelernt, besser hinzuhören, Zusammenhänge zu verstehen und bewusster mit mir umzugehen.",
-      "Heute fühle ich mich wieder deutlich stabiler, fitter, habe mehr Energie und klarere Gedanken — und kann meinen Berufsalltag und meinen Sport viel entspannter genießen.",
-      "Genau deshalb möchte ich dich dabei unterstützen, deinen Körper besser zu verstehen und mehr Leichtigkeit in deinen Alltag zu bringen. Ohne komplizierte Pläne oder starre Regeln — sondern so, dass es wirklich zu deinem Leben passt."
+      {"text": "Kennst du das, wenn dein Bauch einfach nicht mitspielt und du merkst, wie dich das im Alltag immer wieder ausbremst? Genau so ging es mir lange Zeit."},
+      {"text": "Früher habe ich im Vertrieb und im Einzelhandel gearbeitet — viel Stress, wenig Zeit, oft schnell irgendwas essen und weiter. Später habe ich mich im zweiten Bildungsweg für den Sport- und Gesundheitsbereich entschieden und mich selbstständig gemacht. Seit über zehn Jahren arbeite ich mit Menschen in Kursen, in Firmen, in Wellnesshotels und im Präventionsbereich."},
+      {"text": "Ich hatte über Jahre immer wieder Beschwerden, die mich im Alltag und im Sport eingeschränkt haben. Der Wendepunkt kam, als ich anfing, mich intensiver mit meinem Körper und meiner Ernährung auseinanderzusetzen. Schritt für Schritt habe ich gelernt, besser hinzuhören, Zusammenhänge zu verstehen und bewusster mit mir umzugehen."},
+      {"text": "Heute fühle ich mich wieder deutlich stabiler, fitter, habe mehr Energie und klarere Gedanken — und kann meinen Berufsalltag und meinen Sport viel entspannter genießen."},
+      {"text": "Genau deshalb möchte ich dich dabei unterstützen, deinen Körper besser zu verstehen und mehr Leichtigkeit in deinen Alltag zu bringen. Ohne komplizierte Pläne oder starre Regeln — sondern so, dass es wirklich zu deinem Leben passt."}
     ]
   },
 

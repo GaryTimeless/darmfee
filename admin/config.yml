@@ -68,7 +68,7 @@ collections:
               - label: "Karten"
                 name: "cards"
                 widget: "list"
-                field: {label: "Text", widget: "string"}
+                field: {label: "Text", name: "text", widget: "string"}
 
           # ===== 5 GRÜNDE =====
           - label: "5 Gründe Accordion"
@@ -118,7 +118,7 @@ collections:
               - label: "Absätze"
                 name: "paragraphs"
                 widget: "list"
-                field: {label: "Absatz", widget: "markdown", minimal: true}
+                field: {label: "Absatz", name: "text", widget: "markdown", minimal: true}
 
           # ===== GUIDE =====
           - label: "Guide"
