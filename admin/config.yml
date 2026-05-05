@@ -5,7 +5,7 @@ backend:
   name: github
   repo: GaryTimeless/darmbalance
   branch: gh-pages
-  base_url: https://YOUR-PROXY.vercel.app
+  base_url: https://darmbalance-oauth-proxy.vercel.app
   auth_endpoint: /auth
 
 media_folder: ""
