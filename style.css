@@ -460,94 +460,40 @@ strong { font-weight: 600; }
   line-height: 1.65;
 }
 
-/* ===== SPLIT SECTION ===== */
-.split {
-  padding: 4rem 0 5rem;
+/* ===== ÜBER MICH ===== */
+.about {
+  padding: 5rem 0;
   background: var(--bg-white);
 }
 
-.split__inner {
+.about__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 380px 1fr;
+  gap: 4rem;
+  align-items: start;
 }
 
-.split__box {
+.about__image {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: box-shadow var(--transition);
+  aspect-ratio: 3 / 4;
+  box-shadow: var(--shadow-soft);
 }
-.split__box:hover { box-shadow: var(--shadow-hover); }
-
-/* About box */
-.split__box--about {
-  background: var(--bg-accent);
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 0;
-  align-items: stretch;
-}
-
-.split__about-img {
-  overflow: hidden;
-}
-.split__about-img img {
+.about__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
 }
 
-.split__about-text {
-  padding: 2.5rem 2rem;
+.about__content {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  justify-content: center;
-}
-.split__about-text h2 {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1.25;
-}
-.split__about-text p {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-}
-.split__about-text .btn { margin-top: 0.5rem; align-self: flex-start; }
-
-/* Guide box */
-.split__box--guide {
-  background: var(--bg-white);
-  border: 1px solid var(--bg-accent);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
-  align-items: center;
-  padding: 2.5rem 2rem;
+  gap: 1rem;
+  padding-top: 0.5rem;
 }
 
-.split__guide-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.split__guide-content h2 {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1.25;
-}
-.split__guide-content p {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-}
-.split__guide-content .btn { align-self: flex-start; margin-top: 0.5rem; }
-
-.split__label {
+.about__label {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -555,8 +501,59 @@ strong { font-weight: 600; }
   text-transform: uppercase;
 }
 
-/* eBook cover */
-.split__guide-img { flex-shrink: 0; }
+.about__content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.about__content p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 62ch;
+}
+
+/* ===== GUIDE SECTION ===== */
+.guide-section {
+  padding: 3rem 0 4rem;
+  background: var(--bg-accent);
+}
+
+.guide-section__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.guide-section__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.guide-section__content h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.guide-section__content p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+.guide-section__content .btn { align-self: flex-start; margin-top: 0.5rem; }
+
+.guide-section__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
 
 .ebook-cover {
   width: 120px;
@@ -732,8 +729,9 @@ strong { font-weight: 600; }
   }
   .pain__intro p { max-width: 100%; }
 
-  .split__box--about {
-    grid-template-columns: 180px 1fr;
+  .about__inner {
+    grid-template-columns: 280px 1fr;
+    gap: 2.5rem;
   }
 }
 
@@ -770,18 +768,24 @@ strong { font-weight: 600; }
     margin: 0 auto;
   }
 
-  .split__inner {
+  .about__inner {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  .split__box--about {
-    grid-template-columns: 1fr;
+  .about__image {
+    max-width: 320px;
+    margin: 0 auto;
   }
-  .split__about-img {
-    height: 240px;
+
+  .guide-section__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
   }
-  .split__box--guide {
-    grid-template-columns: 1fr;
+  .guide-section__content {
+    align-items: center;
   }
+  .guide-section__content .btn { align-self: center; }
 
   .banner__inner {
     grid-template-columns: 1fr;
