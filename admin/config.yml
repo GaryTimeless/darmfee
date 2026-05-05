@@ -1,0 +1,163 @@
+# Decap CMS Konfiguration für DARMbalance
+# Nach OAuth-Proxy-Deployment: base_url ersetzen!
+
+backend:
+  name: github
+  repo: GaryTimeless/darmbalance
+  branch: gh-pages
+  base_url: https://YOUR-PROXY.vercel.app
+  auth_endpoint: /auth
+
+media_folder: ""
+public_folder: ""
+
+collections:
+  - name: "site_content"
+    label: "Website-Inhalte"
+    editor:
+      preview: false
+    files:
+      - name: "site"
+        label: "Seiteninhalt"
+        file: "data/site.json"
+        fields:
+          # ===== HEADER =====
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Logo-Name (normal)", name: "logoName", widget: "string"}
+              - {label: "Logo-Name (fett)", name: "logoNameBold", widget: "string"}
+              - {label: "Logo-Tagline", name: "logoTagline", widget: "string"}
+              - {label: "CTA-Button", name: "ctaButton", widget: "string"}
+              - label: "Navigation"
+                name: "nav"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Sprungmarke (href)", name: "href", widget: "string"}
+
+          # ===== HERO =====
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Überschrift Zeile 1", name: "headingLine1", widget: "string"}
+              - {label: "Überschrift Zeile 2", name: "headingLine2", widget: "string"}
+              - {label: "Überschrift Zeile 3", name: "headingLine3", widget: "string"}
+              - {label: "Untertitel", name: "subtext", widget: "text"}
+              - {label: "Button 1", name: "primaryButton", widget: "string"}
+              - {label: "Button 2", name: "secondaryButton", widget: "string"}
+              - label: "Badges"
+                name: "badges"
+                widget: "list"
+                fields:
+                  - {label: "Zeile 1", name: "line1", widget: "string"}
+                  - {label: "Zeile 2", name: "line2", widget: "string"}
+
+          # ===== PAIN POINTS =====
+          - label: "Pain Points"
+            name: "painPoints"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Überschrift", name: "heading", widget: "string"}
+              - {label: "Einleitungstext", name: "intro", widget: "markdown", minimal: true}
+              - label: "Karten"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+
+          # ===== 5 GRÜNDE =====
+          - label: "5 Gründe Accordion"
+            name: "reasons"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Überschrift", name: "heading", widget: "string"}
+              - label: "Einträge"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Titel", name: "title", widget: "string"}
+                  - {label: "Text", name: "body", widget: "markdown", minimal: true}
+
+          # ===== BANNER =====
+          - label: "Labor-Banner"
+            name: "banner"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Überschrift", name: "heading", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+
+          # ===== APPROACH =====
+          - label: "Ansatz"
+            name: "approach"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Überschrift", name: "heading", widget: "string"}
+              - label: "Karten"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - {label: "Titel", name: "title", widget: "string"}
+                  - {label: "Beschreibung", name: "description", widget: "string"}
+
+          # ===== ABOUT =====
+          - label: "Über mich"
+            name: "about"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Label (klein)", name: "label", widget: "string"}
+              - {label: "Überschrift", name: "heading", widget: "string"}
+              - label: "Absätze"
+                name: "paragraphs"
+                widget: "list"
+                fields:
+                  - {label: "Absatz", name: "text", widget: "markdown", minimal: true}
+
+          # ===== GUIDE =====
+          - label: "Guide"
+            name: "guide"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Label (klein)", name: "label", widget: "string"}
+              - {label: "Überschrift", name: "heading", widget: "string"}
+              - {label: "Beschreibung", name: "description", widget: "string"}
+              - {label: "Button", name: "button", widget: "string"}
+              - {label: "E-Book Titel (3 Zeilen)", name: "ebookTitle", widget: "text"}
+
+          # ===== TESTIMONIALS =====
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Überschrift", name: "heading", widget: "string"}
+              - label: "Zitate"
+                name: "quotes"
+                widget: "list"
+                fields:
+                  - {label: "Zitat", name: "text", widget: "text"}
+                  - {label: "Name", name: "citation", widget: "string"}
+
+          # ===== FOOTER =====
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "E-Mail-Adresse", name: "email", widget: "string"}
+              - {label: "CTA-Button", name: "ctaButton", widget: "string"}
+              - {label: "Copyright-Text", name: "copyright", widget: "text"}
+              - {label: "Impressum Label", name: "impressumLabel", widget: "string"}
+              - {label: "Datenschutz Label", name: "datenschutzLabel", widget: "string"}
