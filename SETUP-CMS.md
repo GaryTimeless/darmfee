@@ -1,72 +1,60 @@
 # Decap CMS Auth-Setup
 
-> Status: Noch ausstehend. Ohne Auth läuft das CMS nicht — der Admin zeigt nur die Login-Seite.
+> Status: Erledigt. CMS funktioniert unter https://garytimeless.github.io/darmbalance/admin/
 
-## Kontext
+## Verwendete Zugangsdaten
 
-Decap CMS braucht einen OAuth-Proxy, um mit GitHub zu sprechen. Der Proxy läuft auf Vercel (kostenlos) und vermittelt zwischen dem Browser (wo Christine sich einloggt) und der GitHub-API (wo die Commits landen).
+- **GitHub OAuth App**: DARMbalance CMS
+- **Homepage URL**: `https://garytimeless.github.io/darmbalance`
+- **Callback URL**: `https://darmbalance-oauth-proxy.vercel.app/callback`
+- **OAuth Proxy (Vercel)**: `darmbalance-oauth-proxy.vercel.app`
+- **GitHub Repo**: `GaryTimeless/darmbalance` (Branch: `gh-pages`)
 
 ## Schritt 1: GitHub OAuth App registrieren
 
 1. Geh zu https://github.com/settings/developers
 2. Klick **"New OAuth App"**
-3. Füll aus:
+3. Ausfüllen:
    - **Application name:** `DARMbalance CMS`
-   - **Homepage URL:** `https://darmbalance.de`
-   - **Authorization callback URL:** `https://DEIN-VERCEL-NAME.vercel.app/callback`
-     - (Den genauen Namen kriegst du erst nach dem Vercel-Deploy in Schritt 2. Erstmal irgendwas eintragen, wir fixen das später.)
+   - **Homepage URL:** `https://garytimeless.github.io/darmbalance`
+   - **Authorization callback URL:** `https://darmbalance-oauth-proxy.vercel.app/callback`
 4. Klick **"Register application"**
-5. Notier dir **Client ID** und generier ein **Client Secret** (Button "Generate a new client secret")
+5. **Client ID** notieren, **Client Secret** generieren
 
 ## Schritt 2: OAuth-Proxy auf Vercel deployen
 
-1. Geh zu https://github.com/vencax/netlify-cms-github-oauth-provider
-2. Klick den **"Deploy to Vercel"** Button (oder geh auf https://vercel.com, importier das Repo manuell)
-3. Beim Deployment setzt du diese **Environment Variables**:
-   - `OAUTH_CLIENT_ID` = deine GitHub Client ID aus Schritt 1
-   - `OAUTH_CLIENT_SECRET` = dein GitHub Client Secret aus Schritt 1
-   - `REDIRECT_URL` = `https://DEIN-VERCEL-NAME.vercel.app/callback` (die URL, die Vercel dir gibt)
-   - `ORIGIN` = `https://darmbalance.de`
-4. Nach erfolgreichem Deploy kopierst du die Vercel-URL (z.B. `https://darmbalance-oauth.vercel.app`)
+1. Geh auf https://vercel.com → **New Project**
+2. GitHub-Repo `ublabs/netlify-cms-oauth` importieren
+3. **Repository Name**: `darmbalance-oauth-proxy`
+4. **Deploy** (erstmal ohne Env-Vars)
+5. Nach dem Deploy: Settings → Environment Variables:
+   - `OAUTH_GITHUB_CLIENT_ID` = Client ID
+   - `OAUTH_GITHUB_CLIENT_SECRET` = Client Secret
+6. **Redeploy**
 
-## Schritt 3: Callback-URL fixen
+## Schritt 3: config.yml
 
-1. Zurück zur GitHub OAuth App (https://github.com/settings/developers)
-2. Authorization callback URL updaten auf die echte: `https://DEIN-VERCEL-URL.vercel.app/callback`
-3. Speichern
-
-## Schritt 4: config.yml updaten
-
-In `/admin/config.yml` diese Zeile:
+In `/admin/config.yml`:
 
 ```yaml
-base_url: https://YOUR-PROXY.vercel.app
+backend:
+  name: github
+  repo: GaryTimeless/darmbalance
+  branch: gh-pages
+  base_url: https://darmbalance-oauth-proxy.vercel.app
+  auth_endpoint: /auth
 ```
 
-Ersetzen mit deiner echten Vercel-URL:
+## Schritt 4: Christine einweisen
 
-```yaml
-base_url: https://darmbalance-oauth.vercel.app
-```
-
-Dann commiten und pushen.
-
-## Schritt 5: Testen
-
-1. Geh auf `https://darmbalance.de/admin/`
-2. Klick **"Login with GitHub"**
-3. Authorisiere die App
-4. Du solltest im CMS-Editor landen und die "Website-Inhalte" sehen können
-
-## Schritt 6: Christine einweisen
-
-- URL: `https://darmbalance.de/admin/`
-- Login: Ihr GitHub-Account (den musst du als Collaborator im Repo `GaryTimeless/darmbalance` hinzufügen, falls nicht schon geschehen)
-- Workflow: Text ändern → "Publish" klicken → ~30 Sekunden warten → Live auf darmbalance.de
+- URL: `https://garytimeless.github.io/darmbalance/admin/`
+- Login: Ihr GitHub-Account (muss Collaborator im Repo `GaryTimeless/darmbalance` sein)
+- Workflow: Text ändern → "Publish" klicken → ~30 Sekunden warten → Live
 
 ## Troubleshooting
 
-- **"Failed to load config"**: `config.yml` hat einen Syntax-Fehler. Mit YAML-Validator prüfen.
-- **Login redirect klappt nicht**: Callback-URL in GitHub OAuth App prüfen. Muss exakt mit der Vercel-URL + `/callback` übereinstimmen.
-- **"Failed to persist entry"**: Branch `gh-pages` existiert und der GitHub-User hat Schreibrechte auf das Repo.
-- **CMS lädt aber zeigt nichts**: `data/site.json` existiert im Repo und ist gültiges JSON.
+- **"Failed to load config"**: `config.yml` hat einen Syntax-Fehler
+- **Login redirect klappt nicht**: Callback-URL in GitHub OAuth App muss exakt `https://darmbalance-oauth-proxy.vercel.app/callback` sein
+- **"Failed to persist entry"**: GitHub-User braucht Schreibrechte auf das Repo
+- **OAuth Proxy 500er**: Environment Variables auf Vercel prüfen. Ohne `?provider=github` gibt der Endpunkt einen 500er — das ist normal.
+- **CMS lädt aber zeigt nichts**: `data/site.json` existiert im Repo und ist gültiges JSON
