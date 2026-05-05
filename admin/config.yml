@@ -25,7 +25,6 @@ collections:
           - label: "Header"
             name: "header"
             widget: "object"
-            collapsed: true
             fields:
               - {label: "Logo-Name (normal)", name: "logoName", widget: "string"}
               - {label: "Logo-Name (fett)", name: "logoNameBold", widget: "string"}
@@ -42,7 +41,6 @@ collections:
           - label: "Hero"
             name: "hero"
             widget: "object"
-            collapsed: true
             fields:
               - {label: "Überschrift Zeile 1", name: "headingLine1", widget: "string"}
               - {label: "Überschrift Zeile 2", name: "headingLine2", widget: "string"}
@@ -61,7 +59,6 @@ collections:
           - label: "Pain Points"
             name: "painPoints"
             widget: "object"
-            collapsed: true
             fields:
               - {label: "Überschrift", name: "heading", widget: "string"}
               - {label: "Einleitungstext", name: "intro", widget: "markdown", minimal: true}
@@ -74,7 +71,6 @@ collections:
           - label: "5 Gründe Accordion"
             name: "reasons"
             widget: "object"
-            collapsed: true
             fields:
               - {label: "Überschrift", name: "heading", widget: "string"}
               - label: "Einträge"
@@ -88,7 +84,6 @@ collections:
           - label: "Labor-Banner"
             name: "banner"
             widget: "object"
-            collapsed: true
             fields:
               - {label: "Überschrift", name: "heading", widget: "string"}
               - {label: "Text", name: "text", widget: "text"}
@@ -97,7 +92,6 @@ collections:
           - label: "Ansatz"
             name: "approach"
             widget: "object"
-            collapsed: true
             fields:
               - {label: "Überschrift", name: "heading", widget: "string"}
               - label: "Karten"
@@ -111,7 +105,6 @@ collections:
           - label: "Über mich"
             name: "about"
             widget: "object"
-            collapsed: true
             fields:
               - {label: "Label (klein)", name: "label", widget: "string"}
               - {label: "Überschrift", name: "heading", widget: "string"}
@@ -124,7 +117,6 @@ collections:
           - label: "Guide"
             name: "guide"
             widget: "object"
-            collapsed: true
             fields:
               - {label: "Label (klein)", name: "label", widget: "string"}
               - {label: "Überschrift", name: "heading", widget: "string"}
@@ -136,7 +128,6 @@ collections:
           - label: "Testimonials"
             name: "testimonials"
             widget: "object"
-            collapsed: true
             fields:
               - {label: "Überschrift", name: "heading", widget: "string"}
               - label: "Zitate"
@@ -150,7 +141,6 @@ collections:
           - label: "Footer"
             name: "footer"
             widget: "object"
-            collapsed: true
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Titel", name: "title", widget: "string"}

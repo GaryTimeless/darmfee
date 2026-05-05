@@ -6,10 +6,105 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>Content Manager – DARMbalance</title>
   <style>
-    body { background: #f8f6f0; }
+    /* ===== DARMbalance Admin-Styling ===== */
+
+    :root {
+      --darm-green: #556b4d;
+      --darm-green-dark: #445a3e;
+      --darm-cream: #ebe5d9;
+      --darm-bg: #f8f6f0;
+      --darm-text: #3a3a3a;
+      --darm-text-light: #6b6b6b;
+    }
+
+    body {
+      background: var(--darm-bg);
+    }
+
+    /* Haupt-Toolbar (oben) */
+    header {
+      background: var(--darm-green) !important;
+      color: #fff !important;
+    }
+
+    header button,
+    header a {
+      color: #fff !important;
+    }
+
+    /* Sidebar */
+    aside {
+      background: var(--darm-cream) !important;
+    }
+
+    /* Karten / Panels */
+    [class*="Card"],
+    [class*="Pane"],
+    [class*="Styled"],
+    .nc-collectionPage-card,
+    .nc-entryEditor-entryEditor {
+      background: #fff !important;
+      border: 1px solid #e0dbd0 !important;
+      border-radius: 8px !important;
+    }
+
+    /* Primäre Buttons (grün) */
+    button[class*="primary"],
+    a[class*="primary"],
+    button[class*="Primary"],
+    button[class*="Button"] {
+      background: var(--darm-green) !important;
+      color: #fff !important;
+      border-radius: 4px !important;
+    }
+
+    button[class*="primary"]:hover,
+    a[class*="primary"]:hover {
+      background: var(--darm-green-dark) !important;
+    }
+
+    /* Überschriften */
+    h1, h2, h3 {
+      color: var(--darm-text) !important;
+    }
+
+    /* Textfarben */
+    label, p, span {
+      color: var(--darm-text) !important;
+    }
+
+    /* Links */
+    a {
+      color: var(--darm-green) !important;
+    }
+
+    /* Entries-Liste */
+    [class*="EntryCard"],
+    [class*="entryListing"] {
+      background: #fff !important;
+    }
+
+    /* Publish-Button */
+    button[class*="Publish"] {
+      background: var(--darm-green) !important;
+      color: #fff !important;
+    }
   </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Direkt zum Editor springen (überspringt die "Seiteninhalt"-Zwischenseite)
+    (function() {
+      if (window.__darm_redirected) return;
+      window.__darm_redirected = true;
+      setTimeout(function() {
+        var h = window.location.hash;
+        if (h === '#/' || h === '' || h === '#/collections/site_content') {
+          window.location.hash = '#/collections/site_content/entries/site';
+        }
+      }, 1200);
+    })();
+  </script>
 </body>
 </html>
